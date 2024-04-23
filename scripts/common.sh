@@ -54,7 +54,7 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 
 sudo apt-get update -y
 
-sudo apt-get install -y kubelet=$KUBERNETES_VERSION kubectl=$KUBERNETES_VERSION kubeadm=$KUBERNETES_VERSION
+sudo apt-get install -y kubelet={{ KUBERNETES_VERSION }} kubectl={{ KUBERNETES_VERSION }} kubeadm={{ KUBERNETES_VERSION }}
 
 sudo apt-mark hold kubelet kubeadm kubectl
 
